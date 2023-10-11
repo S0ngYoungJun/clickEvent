@@ -24,8 +24,8 @@
       display:flex;
       }
     li{
-      width:50px;
-      height:50px;
+      width:5vw;
+      height:5vh;
       background-color: bisque;
       display : flex;
     }
@@ -46,18 +46,19 @@
     let box = document.createElement("div")
     let button = document.querySelector('button')
     let ul = board.children[0];
-    box.style.width= "50px";
-    box.style.height="50px";
+    box.style.width= "5vw";
+    box.style.height="5vh";
     box.style.backgroundColor="black";
 
-    for(let i = 0; i <600; i++){
+    for(let i = 0; i <400; i++){
       let createLi = document.createElement('li');
       ul.appendChild(createLi)
     }
+    
     console.dir(board)
     let move = 0
-    button.style.width= "50px"
-    button.style.height= "50px"
+    button.style.width= "5vw"
+    button.style.height= "5vh"
     button.style.backgroundColor = "black"
 
     // coin.addEventListener("click", function(){
@@ -71,14 +72,15 @@
     function de(){
       button.remove()
     }
-      button.addEventListener("click",function(){
-        rdm += Math.floor(Math.random()*600)
+      button.addEventListener("click",function(){console.log(rdm)
+        rdm += Math.floor(Math.random()*200)
         de()
-        let plus = document.body.children[0].children[0].children[rdm].appendChild(button)
-        if(rdm>600){
-          rdm-600
-        }
-      })
+        if(rdm>=400){
+          document.body.children[0].children[0].children[rdm%400].appendChild(button)
+        }else{
+        document.body.children[0].children[0].children[rdm].appendChild(button)}
+      } )
+      
    
   </script>
 </body>
