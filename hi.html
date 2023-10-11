@@ -17,10 +17,17 @@
       flex-wrap:wrap;
       display:flex;
     }
-    #board>ul{
+    ul{
+      width:100vw;
+      height:100vh;
+      flex-wrap:wrap;
+      display:flex;
+      }
+    li{
       width:50px;
       height:50px;
       background-color: bisque;
+      display : flex;
     }
     #board>button{
       position:absolute;
@@ -42,22 +49,10 @@
     box.style.height="50px";
     box.style.backgroundColor="black";
 
-    for(let i = 0; i <800; i++){
+    for(let i = 0; i <600; i++){
       let createLi = document.createElement('li');
       ul.appendChild(createLi)
     }
-
-   
-    // for (let j = 0; j <3; j++) {
-    //   for(let i = 0; i < 20; i++) {
-    //     let createDiv = document.createElement('div');
-    //     li[i].appendChild(createDiv)
-    //   }
-    // }
-    // for(i=0; i<800; i++){
-    //   document.body.children[0].appendChild(box)
-    // }
-
     console.dir(board)
     let move = 0
     coin.style.width= "50px"
@@ -68,13 +63,12 @@
     //   coin.style.left= `${move}`+"px"})
 
     // })
-    let kan= [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20]
     
     // let plus = document.body.appendChild(box)
-    let rdm = Math.floor(Math.random()*10) 
+    let rdm = Math.floor(Math.random()*600) 
       board.addEventListener("click",function(){
       
-        let plus = document.body.children[0].children[rdm].appendChild(coin)
+        let plus = document.body.children[0].children[0].children[rdm].appendChild(coin)
       })
    
   </script>
