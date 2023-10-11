@@ -21,12 +21,11 @@
       width:20vw;
       height:50vh;
       background-color: bisque;
-      position:relative;
     }
-    #board>div>button{
+    #board>button{
       position:absolute;
-      width:5vw;
-      height:5vw;
+      width:20vw;
+      height:50vh;
       background-color: black;
 
     }
@@ -34,7 +33,6 @@
 </head>
 <body>
   <div id="board">
-    <div><button id="coin" >1</button></div>
     <div></div>
     <div></div>
     <div></div>
@@ -44,17 +42,35 @@
     <div></div>
     <div></div>
     <div></div>
+    <div></div>
+    <button id="coin" >1</button>
   </div>
   <script>
     let coin = document.getElementById("coin")
     let board = document.getElementById("board")
     console.dir(board)
+    let box = document.createElement("div")
+        box.style.width= "30px";
+        box.style.height="30px";
+         box.style.backgroundColor="black";
     let move = 0
     coin.addEventListener("click", function(){
-      move += 50
-      coin.style.left= `${move}`+"px"
+      move += 320g
+      coin.style.left= `${move}`+"px"})
 
-    })
+    // })
+    let kan= [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20]
+    // let box = document.createElement("div")
+    // box.style.width= "30px";
+    // box.style.height="30px";
+    // box.style.backgroundColor="black";
+    // let plus = document.body.appendChild(box)
+   
+      // coin.addEventListener("click",function(){
+      
+      //   let plus = document.body.children[0].children[].appendChild(box)
+      // })
+   
   </script>
 </body>
 </html>
