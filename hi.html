@@ -20,15 +20,21 @@
     #board>div{
       width:20vw;
       height:50vh;
-      background-color: bisque
-      pos
+      background-color: bisque;
+      position:relative;
     }
-    #board>div{}
+    #board>div>button{
+      position:absolute;
+      width:5vw;
+      height:5vw;
+      background-color: black;
+
+    }
   </style>
 </head>
 <body>
   <div id="board">
-    <div><div id="coin"></div></div>
+    <div><button id="coin" >1</button></div>
     <div></div>
     <div></div>
     <div></div>
@@ -39,5 +45,14 @@
     <div></div>
     <div></div>
   </div>
+  <script>
+    let coin = document.getElementById("coin")
+    let board = document.getElementById("board")
+    console.dir(board)
+
+    coin.addEventListener("click", function(){
+      coin.style.transform ="translate(200px, 200px)";
+    })
+  </script>
 </body>
 </html>
