@@ -17,59 +17,65 @@
       flex-wrap:wrap;
       display:flex;
     }
-    #board>div{
-      width:20vw;
-      height:50vh;
+    #board>ul{
+      width:50px;
+      height:50px;
       background-color: bisque;
     }
     #board>button{
       position:absolute;
-      width:20vw;
-      height:50vh;
-      background-color: black;
-
     }
   </style>
 </head>
 <body>
   <div id="board">
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
+    <ul>
+    </ul>
     <button id="coin" >1</button>
   </div>
   <script>
     let coin = document.getElementById("coin")
     let board = document.getElementById("board")
-    console.dir(board)
     let box = document.createElement("div")
-        box.style.width= "30px";
-        box.style.height="30px";
-         box.style.backgroundColor="black";
+    let ul = board.children[0];
+    box.style.width= "50px";
+    box.style.height="50px";
+    box.style.backgroundColor="black";
+
+    for(let i = 0; i <800; i++){
+      let createLi = document.createElement('li');
+      ul.appendChild(createLi)
+    }
+
+   
+    // for (let j = 0; j <3; j++) {
+    //   for(let i = 0; i < 20; i++) {
+    //     let createDiv = document.createElement('div');
+    //     li[i].appendChild(createDiv)
+    //   }
+    // }
+    // for(i=0; i<800; i++){
+    //   document.body.children[0].appendChild(box)
+    // }
+
+    console.dir(board)
     let move = 0
-    coin.addEventListener("click", function(){
-      move += 320g
-      coin.style.left= `${move}`+"px"})
+    coin.style.width= "50px"
+    coin.style.height= "50px"
+    coin.style.backgroundColor = "black"
+    // coin.addEventListener("click", function(){
+    //   move += 320
+    //   coin.style.left= `${move}`+"px"})
 
     // })
     let kan= [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20]
-    // let box = document.createElement("div")
-    // box.style.width= "30px";
-    // box.style.height="30px";
-    // box.style.backgroundColor="black";
+    
     // let plus = document.body.appendChild(box)
-   
-      // coin.addEventListener("click",function(){
+    let rdm = Math.floor(Math.random()*10) 
+      board.addEventListener("click",function(){
       
-      //   let plus = document.body.children[0].children[].appendChild(box)
-      // })
+        let plus = document.body.children[0].children[rdm].appendChild(coin)
+      })
    
   </script>
 </body>
