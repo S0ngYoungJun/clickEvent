@@ -49,9 +49,11 @@
     let coin = document.getElementById("coin")
     let board = document.getElementById("board")
     console.dir(board)
-
+    let move = 0
     coin.addEventListener("click", function(){
-      coin.style.transform ="translate(200px, 200px)";
+      move += 50
+      coin.style.left= `${move}`+"px"
+
     })
   </script>
 </body>
