@@ -198,44 +198,44 @@
 <body>
   <div id="board">
     <ul>
-      <li class="22"></li>
       <li class="21"></li>
-      <li class="20"></li>
-      <li class="19"></li>
-      <li class="18"></li>
-      <li class="17"></li>
-      <li class="16"></li>
-      <li class="15"></li>
+      <li class='20'></li>
+      <li class='19'></li>
+      <li class='18'></li>
+      <li class='17'></li>
+      <li class='16'></li>
+      <li class='15'></li>
+      <li class='14'></li>
     </ul>
     <ul>
-      <li class="23"></li>
-      <li class="24"></li>
-      <li class="25"></li>
-      <li class="26"></li>
-      <li class="27"></li>
-      <li class="28"></li>
+      <li class='22'></li>
+      <li class='23'></li>
+      <li class='24'></li>
+      <li class='25'></li>
+      <li class='26'></li>
+      <li class='27'></li>
     </ul>
     <ul>
-      <li class= 1><button>1</button></li>
-      <li class= 2></li>
+      <li class="0"><button>1</button></li>
+      <li class="1"></li>
+      <li class="2"></li>
       <li class="3"></li>
       <li class="4"></li>
       <li class="5"></li>
       <li class="6"></li>
       <li class="7"></li>
-      <li class="8"></li>
     </ul>
     <ul>
-      <li class="9"></li>
-      <li class="10"></li>
-      <li class="11"></li>
-      <li class="12"></li>
-      <li class="13"></li>
-      <li class="14"></li>
+      <li class='13'></li>
+      <li class='12'></li>
+      <li class='11'></li>
+      <li class='10'></li>
+      <li class='9'></li>
+      <li class='8'></li>
     </ul>
   </div>
   <script>
-    let number= 1
+    let number= 0
     // let coin = document.getElementById("coin")
     let board = document.getElementById("board")
     // let box = document.createElement("button")
@@ -247,17 +247,19 @@
     // box.style.width= "5vw";
     // box.style.height="5vh";
     // box.style.backgroundColor="white";
-
+    
     function de(){
       button.remove()
     }
       button.addEventListener("click",function(){
-        number += 1
-        let pan = document.getElementsByClassName(`${number}`)
-        de()
-        if(number>28){
-          number = number&28
+        number += Math.floor(Math.random()*6)
+        pan = document.getElementsByClassName(`${number}`)
+        console.log(number)
+        if(number>27){
+          number = number%28
+          pan = document.getElementsByClassName(`${number}`)
           pan[0].appendChild(button)
+          console.log(number)
         }else{
         pan[0].appendChild(button)}
       } )
