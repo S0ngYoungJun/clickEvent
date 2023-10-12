@@ -181,10 +181,20 @@
       height:11.6vh;
       background-color: darkblue
     }
+    #board>div{
+      position:absolute;
+      top:15vh;
+      left:12.5vw;
+      width:75vw;
+      height:70vh;
+      background-image: url(123.png);
+      background-size: cover;
+    }
     li{
       display:flex;
       justify-content: center;
       align-items: center;
+      border: 1px dotted black
     }  
 
    button{
@@ -233,6 +243,7 @@
       <li class='9'></li>
       <li class='8'></li>
     </ul>
+    <div></div>
   </div>
   <script>
     let number= 0
@@ -252,7 +263,7 @@
       button.remove()
     }
       button.addEventListener("click",function(){
-        number += Math.floor(Math.random()*6)
+        number += Math.floor(Math.random()*5)+1
         pan = document.getElementsByClassName(`${number}`)
         console.log(number)
         if(number>27){
